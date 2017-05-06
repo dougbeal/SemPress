@@ -89,3 +89,8 @@ See <http://cmx.org.uk> for an example
 ### [SenPress](https://github.com/pfefferle/SenPress) by me
 
 ![SenPress](https://raw.githubusercontent.com/pfefferle/SenPress/master/screenshot.png)
+
+## Development
+* npm install
+* gem install sas
+* grunt
