@@ -94,5 +94,5 @@ See <http://cmx.org.uk> for an example
 
 ## Development
 * npm install
-* gem install sas
+* gem install sass
 * grunt
