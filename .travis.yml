@@ -1,16 +1,16 @@
 language: node_js
 before_install: gem install sass
 before_script:
-  - npm install grunt-cli -g
+- npm install grunt-cli -g
 script: grunt
 env:
   global:
-    secure: meyE+yt37bz4k0j9hRyqvIRuGXM+BiYRmZ2rQld3CtMSRknWmOxs6s18gchYlzRJnY5BVnLm0yRbUqe6Fm8mgfBsBQrAFlrL4QIAGgZATbwXVH0Lbu59+SjnIqcUlazws3tc57iowbqjB0++mhCZdDOD73x3Zk5CrcjhnAIHabCumIzuDtG0jjUl5vnWLE5Q9kjlEe8pWBVJx3ty8maqfk9fhHojucvnz5uIgqdocOSY4P9nYRs9qnpcwfUjenxvHlcoTJbX4ViE/gr5DVeE6OlcWX/MtRZDrH6fK4SzqEUUNQeGA9S4kSV02RMEy7zzOnn/n4L5qbLITHmYfmNpNuXOiwM/w+ZvjPWZ9OErR524ZOeTyeRVeJJ0Ut7EZZ6vkd2v5SAaOZu+dSos7dJjT2fhiXtUMFuPFb6TzpBcTcVcya7FJX5UZmqz0v5PZE9PsiBA+hYjO9Kablbi9wZDFIwvojRHIb2fcQu56kyU7/UMgnZXIrXLxSFXNGoXiq/yX3UZrFBl4uDYWjRdNT9NgCQC5TAHU14HpCmKoHvR+clANCMQgeJ8X967SV0dMPDuDN1+Ra3OKDpApDjB/hMx464LE3fhlz4pilXBGf+xuMpZFBT7HQfn9gtkgr5ANA1qRKahIu78z2n9Ml4FlbOEKUbg9xNze7kZjdNXCBe9rS8=
+    secure: Pe5ZJwRw0KIIu1rBnmzpWQF+NcxCZgNQJnUzj4wg/BYOx7dX30HS+hDR1p10K6Fw5G/bLKhtlLyD8chy3ANON0JD/Sv+Tnw1VWRyf6esHrcWruFmvgCyOcC7HKlY0Njb5KMNqnW9YxKYDUr2Z1xZ9AeRqlzZH6Ketc7KOPjPDH5eabx2V8KWxjm4fUX5+4vbH93tnFRZwnSj9aI7lFxWb2Fn1Tenq+mYq/ME8PEXckmO6HSypj6CV2H1O39mgNriQ7mbe82RIavrW74lypuoOSl7b6h7dkiPmOiSKtlBnSd7Oo/wVJzYvA+iMp/J4GmvXCu36vpimd7b7wA1hIp8gCQERumcfJi84mptxQOR0IdUdqAmqa/BpbjiqdtyG4YOfnGMv+/LJwjHMzjUsvFu7cdTcx4J3kB6eEpDWW3HugR95Ym38dnlO+/cmQzi/QvZQKpKZGkH0VoBq5oQv5kcD/dDwOIYO94WIKh53rcX1+IjCuXngnVbvBlw2fj3WtUdgzsAjf2vEj8g78KYVF9A3CzNl59u8iymYBEDhi8DwCASliJbFSOierzZ0rq5pEHKE6lhc8ORxywpucLHSPDhqnHFwIC7+NGP8otg4/7HYQeYGHsXNkpH5ZiyDvhE1xtbDZI7E7iB0h4qPa8ItFWYqDhGU7lFD6axxTCnLgdT/OE=
 deploy:
   provider: releases
   api_key:
     secure: env.global.secure
-  file: "build/sempress.zip"
+  file: build/sempress.zip
   skip_cleanup: true
   on:
     tags: true
