@@ -10,5 +10,6 @@ deploy:
   file: build/sempress.zip
   skip_cleanup: true
   on:
+    tags: true
     repo: dougbeal/SemPress
     branch: travis-ci
