@@ -16,14 +16,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    copy: {
-      main: {
-        files: [
-          // includes files within path and its sub-directories
-          {expand: true, src: ['<%= pkg.name.toLowerCase() %>/**'], dest: 'build/'},
-        ],
-      },
-    },
     compress: {
       build: {
         options: {
@@ -32,11 +24,13 @@ module.exports = function (grunt) {
         files: [
           { cwd: '.',
             src: ['<%= pkg.name.toLowerCase() %>/**'],
-            dest: '/'
+            dest: '/',
+            expand: true
           },
-          { cwd: '.',
-            src: ['build/<%= pkg.name.toLowerCase() %>/**'],
-            dest: '/'
+          { cwd: 'build/',
+            src: ['<%= pkg.name.toLowerCase() %>/**'],
+            dest: '/',
+            expand: true
           }         
           ]
       }
@@ -84,10 +78,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-replace');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-wp-i18n');
-  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-compress');
 
   // Default task(s).
-  //grunt.registerTask('default', ['sass', 'copy', 'replace', 'compress' ]);
   grunt.registerTask('default', ['sass', 'replace', 'compress' ]);
 };
