@@ -12,4 +12,4 @@ deploy:
   on:
     tags: true
     repo: dougbeal/SemPress
-    branch: travis-ci
+    branch: master
