@@ -3,3 +3,14 @@ before_install: gem install sass
 before_script:
   - npm install grunt-cli -g
 script: grunt
+env:
+  global:
+    secure: meyE+yt37bz4k0j9hRyqvIRuGXM+BiYRmZ2rQld3CtMSRknWmOxs6s18gchYlzRJnY5BVnLm0yRbUqe6Fm8mgfBsBQrAFlrL4QIAGgZATbwXVH0Lbu59+SjnIqcUlazws3tc57iowbqjB0++mhCZdDOD73x3Zk5CrcjhnAIHabCumIzuDtG0jjUl5vnWLE5Q9kjlEe8pWBVJx3ty8maqfk9fhHojucvnz5uIgqdocOSY4P9nYRs9qnpcwfUjenxvHlcoTJbX4ViE/gr5DVeE6OlcWX/MtRZDrH6fK4SzqEUUNQeGA9S4kSV02RMEy7zzOnn/n4L5qbLITHmYfmNpNuXOiwM/w+ZvjPWZ9OErR524ZOeTyeRVeJJ0Ut7EZZ6vkd2v5SAaOZu+dSos7dJjT2fhiXtUMFuPFb6TzpBcTcVcya7FJX5UZmqz0v5PZE9PsiBA+hYjO9Kablbi9wZDFIwvojRHIb2fcQu56kyU7/UMgnZXIrXLxSFXNGoXiq/yX3UZrFBl4uDYWjRdNT9NgCQC5TAHU14HpCmKoHvR+clANCMQgeJ8X967SV0dMPDuDN1+Ra3OKDpApDjB/hMx464LE3fhlz4pilXBGf+xuMpZFBT7HQfn9gtkgr5ANA1qRKahIu78z2n9Ml4FlbOEKUbg9xNze7kZjdNXCBe9rS8=
+deploy:
+  provider: releases
+  api_key:
+    secure: env.global.secure
+  file: "build/sempress.zip"
+  skip_cleanup: true
+  on:
+    tags: true
